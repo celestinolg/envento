@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #1a202c; /* Cor de fundo dark */
+}
+
+.card {
+  background-color: #2d3748; /* Cor de fundo do card */
+  color: #e2e8f0; /* Cor do texto dentro do card */
+}
