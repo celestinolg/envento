@@ -15,8 +15,6 @@ export class EventosComponent implements OnInit {
 
   ngOnInit(): void {
     this.eventos = this.eventoService.listaEnvetos();
-    console.log(this.eventos);
-
   }
 
   adicionarEvento() {

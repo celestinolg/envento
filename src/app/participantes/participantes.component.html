@@ -1,0 +1,24 @@
+<div class="container mx-auto p-4">
+  <div class="text-center mb-6">
+    <!-- <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2" (click)="adicionarEvento()">Adicionar Evento</button> -->
+    <button class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded" (click)="voltar()">Voltar</button>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div *ngFor="let evento of eventos" class="bg-white shadow-md rounded-lg p-4 cursor-pointer" (click)="selecionarEvento(evento)">
+      <h2 class="text-xl font-semibold">{{ evento.titulo }}</h2>
+      <p class="text-gray-600 mb-2">{{ evento.descricao }}</p>
+      <p class="text-gray-600">{{ evento.data | date }}</p>
+      <p class="text-gray-600">{{ evento.local }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="eventoSelecionado" class="mt-4">
+    <h3 class="text-xl font-semibold mb-2 text-white">Participantes do Evento: {{ eventoSelecionado.titulo }}</h3>
+    <div *ngFor="let participante of eventoSelecionado.participantes" class="bg-white shadow-md rounded-lg p-4 mb-4">
+      <h4 class="text-lg font-semibold">{{ participante.nome }}</h4>
+      <p class="text-gray-600">{{ participante.email }}</p>
+      <!-- Outros campos específicos dos participantes -->
+    </div>
+  </div>
+</div>
