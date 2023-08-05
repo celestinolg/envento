@@ -1,0 +1,11 @@
+<h3 class="text-xl font-semibold mb-2 text-white">
+  Participantes do Evento: {{ titulo }}
+</h3>
+<div
+  *ngFor="let participante of participantes"
+  class="bg-white shadow-md rounded-lg p-4 mb-4"
+>
+  <h4 class="text-lg font-semibold">{{ participante.nome }}</h4>
+  <p class="text-gray-600">{{ participante.email }}</p>
+  <!-- Outros campos específicos dos participantes -->
+</div>

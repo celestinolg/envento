@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { Evento } from '../models/evento';
 import { EventoService } from '../services/evento.service';
@@ -9,6 +9,9 @@ import { EventoService } from '../services/evento.service';
   styleUrls: ['./participantes.component.scss'],
 })
 export class ParticipantesComponent {
+  // @ViewChild('meuContainer',{read: ViewContainerRef})
+  // meuContainer!: ViewContainerRef;
+
   eventos!: Evento[];
 
   eventoSelecionado: Evento | null = null;
